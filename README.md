@@ -107,19 +107,26 @@ The runtime generally increases as input size increases.
 
 ### Question 2: Recurrence Equation
 ### Give a recurrence that is the basis of a dynamic programming algorithm to compute the HVLCS of strings A and B. You must provide the appropriate base cases, and explain why your recurrence is correct.
-Let OPT(i, j) denote the maximum value of a common subsequence between the first i characters of string A and the first j characters of string B
+Let OPT(i, j) denote the maximum value of a common subsequence between the first i characters of string A and the first j characters of string B.
+
 Base cases are:
+```text
 OPT(0, j) = 0
 OPT(i, 0) = 0
+```
+
 Recurrence:
+```text
 If characters match: OPT(i, j) = max(OPT(i-1, j), OPT(i, j-1), OPT(i-1, j-1) + value(A[i-1]))
 Otherwise: OPT(i, j) = max(OPT(i-1, j), OPT(i, j-1))
+```
 
 Justification:
 At position (i,j), an optimal solution must fall into one of the following cases:
 - Skip the last character of A
 - Skip the last character of B
 - Match the characters if they are equal
+
 These cases cover all possibilities for constructing a common subsequence. Since the recurrence considers all valid choices and takes the maximum, it correctly computes the optimal value.
 
 ### Question 3: Big-Oh
@@ -138,5 +145,5 @@ for i from 1 to n:
 ```
 
 Complexity
-Time Complexity: O(n*m)
-Space Complexity: O(n*m)
+- Time Complexity: O(n*m)
+- Space Complexity: O(n*m)
