@@ -1,5 +1,6 @@
 # Programming Assignment 3: Highest Value Longest Common Sequence
 Name: Nam Tran
+
 UFID: 19547941
 
 ## Project Description
