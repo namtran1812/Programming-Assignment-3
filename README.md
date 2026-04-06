@@ -39,8 +39,8 @@ This project solves the Highest Value Longest Common Subsequence (HVLCS) problem
 │   └── runtime_graph.png
 │
 ├── src/
-│   ├── hvlcs.py #main HVLCS solution
-│   ├── q1_plot.py #plotting script for question 1
+│   ├── hvlcs.py      #main HVLCS solution
+│   ├── q1_plot.py    #plotting script for question 1
 │   └── q1_runtime.py #runtime measurement script for question 1
 │
 └── README.md
